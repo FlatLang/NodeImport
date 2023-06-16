@@ -1,0 +1,11 @@
+package flat/node/import
+
+class {
+    public native static async import(String module) -> Object {
+        external {
+            return await import(#{ module.chars.data });
+        }
+
+        return null
+    }
+}
